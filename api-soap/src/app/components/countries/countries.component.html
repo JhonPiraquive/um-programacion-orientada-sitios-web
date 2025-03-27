@@ -1,0 +1,8 @@
+<h1>🌍 Lista de Países</h1>
+<button (click)="getCountries()">Cargar Países</button>
+
+<ul>
+  <li *ngFor="let country of countries">
+    {{ country.name }} ({{ country.code }})
+  </li>
+</ul>
