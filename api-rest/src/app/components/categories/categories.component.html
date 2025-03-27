@@ -1,0 +1,10 @@
+<h2>Consultar API REST de Chuck Norris</h2>
+<button (click)="getCategories()">Obtener Categorias</button>
+
+<p *ngIf="joke">{{ joke }}</p>
+
+<ul>
+  <li *ngFor="let category of categories">
+    <button (click)="getJoke(category)">{{ category }}</button>
+  </li>
+</ul>
