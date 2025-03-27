@@ -1,0 +1,31 @@
+<h2>Directive ngif</h2>
+<button (click)="mostrar = !mostrar">Mostrar</button>
+
+<div *ngIf="mostrar">
+    <p>Este texto aparece y desaparece con *ngIf</p>
+</div>
+
+<h2>Directive ngfor</h2>
+<ul>
+    <li *ngFor="let item of lista">{{ item }}</li>
+</ul>
+
+<h2>Directive ngSwitch</h2>
+<button (click)="color = 'rojo'">Rojo</button>
+<button (click)="color = 'azul'">Azul</button>
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'rojo'">Rojo seleccionado</p>
+    <p *ngSwitchCase="'azul'">Azul seleccionado</p>
+    <p *ngSwitchDefault>No hay color</p>
+</div>
+
+<h2>Directive ngClass</h2>
+<p [ngClass]="{'resaltado': esImportante}">Texto dinámico</p>
+<button (click)="esImportante = !esImportante">Es importante</button>
+
+<h2>Directive ngStyle</h2>
+<p [ngStyle]="{'color': colorTexto, 'font-size.px': 20}">Texto con estilo dinámico</p>
+<button (click)="colorTexto = 'blue'">Cambiar Azul</button>
+<button (click)="colorTexto = 'red'">Cambiar Rojo</button>
+
+<p appMouse>Texto con directiva personalizada</p>

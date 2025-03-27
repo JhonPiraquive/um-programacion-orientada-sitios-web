@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { HooksComponent } from './components/hooks/hooks.component';
 import { NgIf } from '@angular/common';
+import { DirectivesComponent } from './components/directives/directives.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CategoriesComponent, HooksComponent, NgIf],
+  imports: [CategoriesComponent, HooksComponent, NgIf, DirectivesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
