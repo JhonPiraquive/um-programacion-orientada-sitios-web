@@ -2,6 +2,7 @@
 <button (click)="getCategories()">Obtener Categorias</button>
 
 <p *ngIf="joke">{{ joke }}</p>
+<p>{{ prueba.nombre | uppercase }}</p>
 
 <ul>
   <li *ngFor="let category of categories">

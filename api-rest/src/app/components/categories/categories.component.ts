@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { NgFor, NgIf } from '@angular/common';
+import { JsonPipe, NgFor, NgIf, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-categories',
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, JsonPipe, UpperCasePipe],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css'
 })
 export class CategoriesComponent {
   categories: any[] = []; // VARIABLE PARA ALMACENAR LA INFORMACIÓN DE LA API
   joke: string = ''; //VARIABLE PARA GENERAR UNA BROMA ALEATORIA
+  prueba = {
+    nombre: "alejandro"
+  }
 
   // INICIALIZO EL COMPONENTE CON EL API SERVICE PARA CONSUMIRLO
   constructor(private apiService: ApiService) {}
